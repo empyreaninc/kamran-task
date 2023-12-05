@@ -29,9 +29,9 @@ describe('Todays deals carting & checkout flow test', () => {
         // Check for the presence of the error message
         //const errorMessageExists = cy.contains('This item cannot be shipped to your selected delivery location. Please choose a different delivery location').should('exist');
 
-
-        productPage.changeZipCode()
-        cy.reload();
+        // If your products are showing incompatible shipping due to location, enable the zip code changer.
+        //productPage.changeZipCode()
+        //cy.reload();
 
 
 

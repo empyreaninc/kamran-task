@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-05T17:26:32.162Z",
+    "end": "2023-12-05T17:26:38.812Z",
+    "duration": 6650,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1a9b70e-95ed-4463-937a-b37561a2b46a",
+      "title": "",
+      "fullFile": "cypress/e2e/crossDomainTest.cy.ts",
+      "file": "cypress/e2e/crossDomainTest.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "189b22f2-0e38-42ad-80c6-f4d94574ae55",
+          "title": "Cross domain testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Completes some actions on one site, changes site and continues to complete further actions",
+              "fullTitle": "Cross domain testing Completes some actions on one site, changes site and continues to complete further actions",
+              "timedOut": null,
+              "duration": 5082,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "commitquality_1.default.visitCQ();\ncommitquality_1.default.visitCQ();\ncommitquality_1.default.useFilterSearch(data.demoQaFilterValue);\ncommitquality_1.default.clickFilterSearch();\ncommitquality_1.default.getResults();\ncommitquality_1.default.resetFilters();\n//\"add product\" should not be present\ncy.should('not.contain', '.add-product-message');\n;\ndemoblaze_1.default.visitDemoBlaze();\ncy.origin('https://demoblaze.com', function () {\n    cy.readFile('cypress/fixtures/fixturevalues.json').then(function (data) {\n        var demoblazePage = Cypress.require(\"../integration/demoblaze\");\n        cy.get('[data-target=\"#exampleModal\"]').click();\n        cy.get('#recipient-email').click({\n            force: true\n        }).type(data.supportEmail);\n        cy.get('#recipient-name').click({\n            force: true\n        }).type(data.supportName);\n        cy.get('#message-text').click({\n            force: true\n        }).type(data.supportMessage);\n        cy.get('#exampleModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click();\n        cy.on('window:alert', function (str) {\n            //page should alert with \"Thanks for the message!!\"\n            expect(str).to.equal('Thanks for the message!!');\n        });\n    });\n});",
+              "err": {},
+              "uuid": "63019f57-975d-48a7-aec9-a20e2ad79e11",
+              "parentUUID": "189b22f2-0e38-42ad-80c6-f4d94574ae55",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63019f57-975d-48a7-aec9-a20e2ad79e11"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5082,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
