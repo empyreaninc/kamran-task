@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-27T13:19:08.252Z",
+    "end": "2023-11-27T13:19:14.038Z",
+    "duration": 5786,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3d60e641-5e4a-4444-993a-8dec90cb5e5c",
+      "title": "",
+      "fullFile": "cypress/e2e/crossDomainTest.cy.ts",
+      "file": "cypress/e2e/crossDomainTest.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "32d93d6b-266f-4c50-a3ab-a898ebb7ddea",
+          "title": "Cross domain testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Does some actions on one site and then the other",
+              "fullTitle": "Cross domain testing Does some actions on one site and then the other",
+              "timedOut": null,
+              "duration": 4023,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "commitquality_1.default.visitCQ();\ncommitquality_1.default.visitCQ();\ncommitquality_1.default.useFilterSearch();\ncommitquality_1.default.clickFilterSearch();\ncommitquality_1.default.getResults();\ncommitquality_1.default.resetFilters();\ncy.should('not.contain', '.add-product-message');\n;\ndemoblaze_1.default.visitDemoBlaze();\ncy.origin('https://demoblaze.com', function () {\n    var demoblazePage = Cypress.require(\"../integration/demoblaze\");\n    cy.get('[data-target=\"#exampleModal\"]').click();\n    cy.get('#recipient-email').click({ force: true }).type(\"test@qa.test\");\n    cy.get('#recipient-name').click({ force: true }).type(\"kamran\");\n    cy.get('#message-text').click({ force: true }).type('Test message to support');\n    cy.on('window:alert', function (str) {\n        expect(str).to.equal('Thanks for the message!!');\n    });\n});",
+              "err": {},
+              "uuid": "4b7bd661-eb24-434c-9842-94d1be83bd77",
+              "parentUUID": "32d93d6b-266f-4c50-a3ab-a898ebb7ddea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4b7bd661-eb24-434c-9842-94d1be83bd77"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4023,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

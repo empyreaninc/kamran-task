@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-11-27T13:19:35.020Z",
+    "end": "2023-11-27T13:20:07.272Z",
+    "duration": 32252,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f4210cb9-68cf-4ccf-91bc-f40f03708cba",
+      "title": "",
+      "fullFile": "cypress/e2e/todaysDeals.cy.ts",
+      "file": "cypress/e2e/todaysDeals.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "62f683d8-fc48-43ec-a95a-0fe1dc1ad8fd",
+          "title": "Hamburger Menu Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adds item to cart from todays deals and proceeds until payment is required.",
+              "fullTitle": "Hamburger Menu Search Adds item to cart from todays deals and proceeds until payment is required.",
+              "timedOut": null,
+              "duration": 30293,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage_1.default.visit();\nhomePage_1.default.clickTodaysDeals();\ntodaysDealsShop_1.default.selectProductCategory();\ntodaysDealsShop_1.default.selectProductChild();\nproductPage_1.default.addToCart();\nproductPage_1.default.openCart();\ncartPage_1.default.proceedToCheckout();\nloginpage_1.default.enterEmail();\nloginpage_1.default.proceedToPassword();\nloginpage_1.default.enterPassword();\nloginpage_1.default.proceedWithlogin();\ncy.get('[data-testid=\"Address_selectShipToThisAddress\"]').then(function ($element) {\n    if ($element.length > 0) {\n        checkoutPage_1.default.useThisAddress();\n    }\n    else {\n        checkoutPage_1.default.chooseCountry();\n        checkoutPage_1.default.enterFullName();\n        checkoutPage_1.default.enterStreetAddress();\n        checkoutPage_1.default.enterAppartment();\n        checkoutPage_1.default.enterCity();\n        checkoutPage_1.default.enterState();\n        checkoutPage_1.default.enterZipCode();\n        checkoutPage_1.default.enterPhoneNumber();\n        checkoutPage_1.default.useThisAddress();\n    }\n});\ncy.contains('Your available balance').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your available balance' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Your available balance' but never did.\n    at Context.eval (webpack://kamranlautier-work/./cypress/e2e/todaysDeals.cy.ts:38:0)",
+                "diff": null
+              },
+              "uuid": "22e1f3e8-10b6-4335-a49d-eb03983f3fdf",
+              "parentUUID": "62f683d8-fc48-43ec-a95a-0fe1dc1ad8fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "22e1f3e8-10b6-4335-a49d-eb03983f3fdf"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30293,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

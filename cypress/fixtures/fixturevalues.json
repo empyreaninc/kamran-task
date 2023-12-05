@@ -1,0 +1,20 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "qatest@emailcitadel.com",
+  "password": "qatest@emailcitadel.com",
+  "Country": "18",
+  "fullName": "marc al",
+  "street": "road home",
+  "street2": "24",
+  "city": "London",
+  "State":  "England",
+  "Zip": "90210",
+  "Phone": "07415653124",
+  "searchTerm": "mice",
+  "demoQaFilterValue": "test filter",
+  "supportEmail": "qatest@qatest.qa",
+  "supportName": "obi wan kenobi",
+  "supportMessage": "Hello there",
+  "countryID": "234"
+
+}
