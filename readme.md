@@ -12,9 +12,10 @@ All tests have supporting assertions to validate success or failure.
 
 Open the folder in your preferred IDE.
 
-## Make sure you have Cypress installed globally. If not, you can install it with:
+## Make sure you have Cypress & Mocha installed. If not, you can install it with:
 
 npm install -g cypress
+
 npm install -g mocha
 ## Run Tests using
 
