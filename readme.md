@@ -1,4 +1,4 @@
-# Kamran Lautier Test
+# Kamran Lautier Automation Suite Example
 
 Browser automation framework for testing cross domain & a few features on Amazon.com US.
 
